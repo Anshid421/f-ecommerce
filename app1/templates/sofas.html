@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+sofa page
+{% endblock title %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'css/shop.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="shop">
+    <div class="shop-head">
+        <h2>Shop</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+</div>
+<div class="shop-heading">
+    <h1>Sofas</h1>
+</div>
+<div class="shop-main">
+    {% for i in sofa_product %}
+    <div class="product-card card">
+        <a href="{% url 'product_detail' i.id %}">
+            <div class="product-img">
+                <img src="{{ i.image.url }}" alt="">
+            </div>
+            <div class="product-name">
+                <h4>{{ i.name }}</h4>
+            </div>
+            <div class="product-price">
+                <p>RS:{{ i.price }}</p>
+            </div>
+            <div class="product-disc">
+                <p>{{ i.description }}</p>
+            </div>
+        </a>
+        <!-- svg  -->
+        <div class="add-cart">
+            <a href="{% url 'add_cart' i.id %}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                </svg></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

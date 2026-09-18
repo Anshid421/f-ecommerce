@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+about page
+{% endblock title %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="top-div-home">
+    <div class="home-col">
+        <h1>About Us</h1>
+        <p>Explore our wide range of stylish and comfortable
+            furniture to transform your living space.</p>
+        <a href="{% url 'shop' %}"><button class="shop-now-btn">Shop Now</button></a>
+    </div>
+    <div class="home-sofa">
+        <img src="{% static 'image\couch.png' %}" alt="">
+    </div>
+</div>
+
+<div class="about-content">
+    <div class="choose-us-section">
+        <div class="choose-first">
+            <h2 class="choose-hd">Why Choose Us?</h2>
+            <p>Experience the perfect blend of style, comfort, and quality with our furniture collection.
+                We are committed to providing you with exceptional products and outstanding customer service.
+            </p>
+
+            <div class="row-card">
+                <div class="choose-card">
+                    <div class="truck-svg"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46"
+                            viewBox="0 0 46 46" fill="none">
+                            <path
+                                d="M31.6591 35.3637C33.6046 35.3637 35.1818 33.7865 35.1818 31.841C35.1818 29.8954 33.6046 28.3182 31.6591 28.3182C29.7135 28.3182 28.1364 29.8954 28.1364 31.841C28.1364 33.7865 29.7135 35.3637 31.6591 35.3637Z"
+                                stroke="black" stroke-width="2.81818" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M13.3409 35.3637C15.2865 35.3637 16.8636 33.7865 16.8636 31.841C16.8636 29.8954 15.2865 28.3182 13.3409 28.3182C11.3954 28.3182 9.81818 29.8954 9.81818 31.841C9.81818 33.7865 11.3954 35.3637 13.3409 35.3637Z"
+                                stroke="black" stroke-width="2.81818" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M28.1364 17.0454H33.7727L38 21.2727V28.3181H28.1364V17.0454Z" stroke="black"
+                                stroke-width="2.81818" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M28.1364 10H7V28.3182H28.1364V10Z" stroke="black" stroke-width="2.81818"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="choose-card-content">
+                        <h4>Fast & Free Shipping</h4>
+                        <p>Enjoy free shipping on all orders, making it easier than ever to get the furniture you love
+                            delivered right to your doorstep.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="choose-card">
+                    <div class="truck-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                            <path
+                                d="M14.2 9L10 14.6V34.2C10 34.9426 10.295 35.6548 10.8201 36.1799C11.3452 36.705 12.0574 37 12.8 37H32.4C33.1426 37 33.8548 36.705 34.3799 36.1799C34.905 35.6548 35.2 34.9426 35.2 34.2V14.6L31 9H14.2Z"
+                                stroke="black" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M28.2 20.2C28.2 21.6852 27.61 23.1095 26.5598 24.1597C25.5096 25.21 24.0852 25.8 22.6 25.8C21.1148 25.8 19.6904 25.21 18.6402 24.1597C17.59 23.1095 17 21.6852 17 20.2"
+                                stroke="black" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10 14.6H35.2" stroke="black" stroke-width="2.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="choose-card-content">
+                        <h4>Quality Craftsmanship</h4>
+                        <p>Our furniture is crafted with the utmost care and attention to detail, ensuring that you
+                            receive
+                            pieces that are not only beautiful but also durable and functional.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="choose-card">
+                    <div class="truck-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                            <path
+                                d="M22.5 37C29.9558 37 36 30.9558 36 23.5C36 16.0442 29.9558 10 22.5 10C15.0442 10 9 16.0442 9 23.5C9 30.9558 15.0442 37 22.5 37Z"
+                                stroke="black" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M22.5 28.9C25.4823 28.9 27.9 26.4823 27.9 23.5C27.9 20.5176 25.4823 18.1 22.5 18.1C19.5177 18.1 17.1 20.5176 17.1 23.5C17.1 26.4823 19.5177 28.9 22.5 28.9Z"
+                                stroke="black" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M26.3205 27.3204L32.0445 33.0444" stroke="black" stroke-width="2.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.9555 33.0444L18.6795 27.3204" stroke="black" stroke-width="2.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M26.3205 19.6796L32.0445 13.9556" stroke="black" stroke-width="2.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M26.3205 19.6796L31.086 14.9141" stroke="black" stroke-width="2.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.9555 13.9556L18.6795 19.6796" stroke="black" stroke-width="2.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div class="choose-card-content">
+                        <h4>Exceptional Customer Service</h4>
+                        <p>Our dedicated customer service team is here to assist you every step of the way, ensuring
+                            that
+                            your shopping experience is smooth and enjoyable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="choose-card">
+                    <div class="truck-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                            <path d="M16.3333 37.3333L11 32L16.3333 26.6666" stroke="black" stroke-width="2.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M35 23.9999V26.6665C35 28.081 34.4381 29.4376 33.4379 30.4378C32.4377 31.438 31.0812 31.9999 29.6667 31.9999H11"
+                                stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M29.6667 7.99988L35 13.3332L29.6667 18.6665" stroke="black" stroke-width="2.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M11 21.3333V18.6666C11 17.2521 11.5619 15.8955 12.5621 14.8953C13.5623 13.8952 14.9188 13.3333 16.3333 13.3333H35"
+                                stroke="black" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="choose-card-content">
+                        <h4>Easy Returns & Exchanges</h4>
+                        <p>We want you to be completely satisfied with your purchase. If for any reason you're not happy
+                            with your order, we offer hassle-free returns and exchanges to ensure your satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="choose-image">
+            <img src="{% static 'image\why-choose-us-img.jpg' %}" alt="">
+        </div>
+    </div>
+
+    <!-- next section -->
+    <div class="our-tm-hd">
+        <h2>Our Teams</h2>
+    </div>
+    <div class="our-team">
+        <div class="person-card">
+            <div class="person-img">
+                <img src="{% static 'image\person_1.jpg' %}" alt="">
+            </div>
+            <div class="person-name">
+                <h2>Alan walker</h2>
+            </div>
+            <div class="person-post">
+                <p>CEO of company</p>
+            </div>
+            <div class="person-dic">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident debitis consequatur, amet labore temporibus voluptas</p>
+            </div>
+        </div>
+
+        <div class="person-card">
+            <div class="person-img">
+                <img src="{% static 'image\person_2.jpg' %}" alt="">
+            </div>
+            <div class="person-name">
+                <h2>Jhon</h2>
+            </div>
+            <div class="person-post">
+                <p>Manager,HR</p>
+            </div>
+            <div class="person-dic">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident debitis consequatur, amet labore temporibus voluptas</p>
+            </div>
+        </div>
+
+        <div class="person-card">
+            <div class="person-img">
+                <img src="{% static 'image\person_3.jpg' %}" alt="">
+            </div>
+            <div class="person-name">
+                <h2>Patrik White</h2>
+            </div>
+            <div class="person-post">
+                <p>Managing Director</p>
+            </div>
+            <div class="person-dic">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident debitis consequatur, amet labore temporibus voluptas</p>
+            </div>
+        </div>
+
+        <div class="person-card">
+            <div class="person-img">
+                <img src="{% static 'image\person_4.jpg' %}" alt="">
+            </div>
+            <div class="person-name">
+                <h2>Stefy Jorj</h2>
+            </div>
+            <div class="person-post">
+                <p>Marketing EX</p>
+            </div>
+            <div class="person-dic">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident debitis consequatur, amet labore temporibus voluptas</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- last -->
+</div>
+
+
+{% endblock content %}

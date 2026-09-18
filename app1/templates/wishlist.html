@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Profile
+{% endblock title %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'css/wishlist.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="wishlist-container">
+    <h2 class="wishlist-title">My Wishlist ❤️</h2>
+
+    <div class="wishlist-grid">
+
+        {% for item in wishlist_items %}
+        <div class="wishlist-card">
+
+            <div class="wishlist-img">
+                <img src="{{ item.product.image.url }}">
+            </div>
+
+            <div class="wishlist-name">
+                <h3>{{ item.product.name }}</h3>
+            </div>
+            
+            <div class="product-disc">
+                <p>{{ item.product.description }}</p>
+            </div>
+
+            <div class="wishlist-price">
+                <p>₹ {{ item.product.price }}</p>
+            </div>
+
+
+            <div class="wishlist-actions">
+                <a href="{% url 'add_cart' item.product.id %}" class="btn cart-btn">
+                    Add to Cart 🛒
+                </a>
+
+                <a href="{% url 'remove_wishlist' item.id %}" class="btn remove-btn">
+                    Remove
+                </a>
+            </div>
+
+        </div>
+        {% empty %}
+        <p class="empty">Your wishlist is empty !</p>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock content %}

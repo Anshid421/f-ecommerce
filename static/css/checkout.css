@@ -1,0 +1,217 @@
+/* RESET */
+.checkout-container * {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+/* form{
+    display: flex;
+    gap: 50px;
+    width: 100%;
+} */
+
+/* MAIN CONTAINER */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    background: #f5f5f5;
+}
+
+/* left side  */
+.billing-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 50%;
+}
+
+.billing-box h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* ella label */
+.billing-box label {
+    display: block;
+    margin: 12px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.billing-box label span {
+    color: red;
+}
+
+/* Input */
+.billing-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+
+
+.billing-box input:focus {
+    outline: none;
+    border-color: #333;
+    background: #fff;
+}
+
+/* ROW */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.field {
+    flex: 1;
+}
+
+
+
+/* right side order */
+.order-section {
+    width: 40%;
+}
+
+.order-section h2 {
+    margin-bottom: 15px;
+}
+
+
+.order-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+
+.total {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.payment {
+    margin-top: 15px;
+}
+
+.payment label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+
+
+.place-order {
+    width: 100%;
+    padding: 14px;
+    font-weight: 600;
+    font-size: larger;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.place-order:hover {
+    background: #333;
+}
+
+
+
+@media screen and (max-width: 845px){
+
+    .checkout-container{
+        padding: 20px 10px;
+    }
+
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .search-form{
+        position: relative;
+    }
+
+    .srch-bt{
+        position: absolute;
+        right: 0;
+    }
+
+
+    .billing-box,
+    .order-section{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .order-section{
+        padding-bottom: 150px;
+    }
+
+    .billing-box input{
+        padding: 10px;
+        font-size: 13px;
+        width: 99%;
+    }
+
+
+    .checkout-container *{
+        margin: 0px;
+    }
+
+
+    .row{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .order-row{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    .order-row img{
+        width: 40px;
+    }
+
+
+    .pyment-type{
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .icon-svg{
+        width: 32px;
+        height: 20px;
+    }
+
+    .place-order{
+        padding: 12px;
+        font-size: 15px;
+    }
+}

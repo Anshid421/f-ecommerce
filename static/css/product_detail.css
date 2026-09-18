@@ -1,0 +1,116 @@
+/* main lyt */
+.product-detail-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 150px;
+}
+
+
+.product-image {
+    flex: 1.5;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.374);
+}
+
+
+/* mate side */
+.product-info {
+    flex: 1;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.price {
+    color: #e63946;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.desc {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+/* btns ellaam */
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+.btn.cart {
+    background: #333;
+    color: white;
+}
+
+.btn.cart:hover {
+    background: #000;
+}
+
+
+.btn.buy {
+    background: #e63946;
+    color: white;
+}
+
+.btn.buy:hover {
+    background: #b91c1c;
+}
+
+
+.btn.wish {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.btn.wish:hover {
+    background: #e3b1d9;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .product-detail-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .actions {
+        justify-content: center;
+        display: grid;
+    }
+}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+My Orders
+{% endblock title %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'css/myorders.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="orders-container">
+
+    <h2 class="orders-title">My Orders</h2>
+
+
+
+    {% if orders %}
+
+    {% for order in orders %}
+    <div class="order-card">
+
+        <!-- HEADER -->
+        <div class="order-header">
+            <div>
+                <p class="order-id">Order #{{ order.id }}</p>
+                <p class="order-date">{{ order.created_at }}</p>
+                <p class="delivery-date"> Delivery: {{ order.delivery_date }}</p>
+            </div>
+
+            <div class="order-total">
+                ₹ {{ order.total_amount }}
+            </div>
+        </div>
+
+        <!-- ITEMS -->
+        <div class="order-items">
+            {% for il in order.orderitem_set.all %}
+            <div class="item-row">
+                <img src="{{ il.product.image.url }}" width="80" style="border-radius: 5px;">
+                <span>{{ il.product.name }}</span>
+                <span>x{{ il.quantity }}</span>
+                <span>₹ {{ il.price }}</span>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    {% endfor %}
+
+    {% else %}
+    <p class="empty"><strong>No Orders Found !</strong></p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

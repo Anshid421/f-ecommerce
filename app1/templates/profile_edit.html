@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+profile edit
+{% endblock title %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'css/profile-edit.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="edit-container">
+
+    <h2 class="edit-title">Edit Profile</h2>
+
+    <form class="edit-form" action="" method="POST">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input class="form-input" type="number" name="phone" value="{{ obs.phone }}" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" name="email" value="{{ obs.email }}">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Address</label>
+            <textarea class="form-textarea" name="address">{{ obs.address }}</textarea>
+        </div>
+
+        <button class="update-btn" type="submit">Update Profile</button>
+
+    </form>
+
+</div>
+
+{% endblock content %}

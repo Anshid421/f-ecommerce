@@ -1,0 +1,185 @@
+
+.profile-container{
+    width:100%;
+    max-width:420px;
+    margin:80px auto;
+    background:#ffffff;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+}
+
+
+.profile-container:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 40px rgba(0,0,0,0.12);
+}
+
+
+.profile-container h2{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:25px;
+    color:#1f2937;
+}
+
+
+.profile-info{
+    margin-bottom:25px;
+}
+
+.profile-info p{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    font-size:15px;
+    border-bottom:1px solid #f1f1f1;
+    color:#555;
+}
+
+
+.profile-info strong{
+    color:#111827;
+    font-weight:600;
+}
+
+.orders-btn {
+    display:block;
+    text-align:center;
+    background:#1f1f1f;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s ease;
+    /* margin-bottom: -10px; */
+}
+
+.orders-btn:hover {
+    background: #333;
+}
+
+/* Edit button section */
+.edit-profile{
+    margin-top:10px;
+}
+
+.wishlist-btn{
+    display:block;
+    text-align:center;
+    background:#ff0291;
+    
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s ease;
+}
+.wishlist-btn:hover{
+    background:#ff0278;
+}
+
+
+
+
+.edit-profile button{
+    width:100%;
+    border:none;
+    background:#14532d;   
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.edit-profile a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    display:block;
+}
+
+.edit-profile button:hover{
+    background:#166534;
+}
+
+
+/* Logout Button */
+.logout-btn{
+    display:block;
+    text-align:center;
+    background:#dc2626;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.logout-btn:hover{
+    background:#b91c1c;
+}
+
+
+
+@media (max-width: 1125px){
+
+    .profile-container{
+        margin-bottom: 200px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .profile-container{
+        max-width: 90%;
+        margin: 60px auto;
+        padding: 25px;
+        margin-bottom: 200px;
+    }
+
+    .profile-container h2{
+        font-size: 22px;
+    }
+
+    .profile-info p{
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 480px){
+
+    .profile-container{
+        max-width: 85%;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 200px;
+
+    }
+
+    .profile-container h2{
+        font-size: 20px;
+    }
+
+    .profile-info p{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .orders-btn,
+    .wishlist-btn,
+    .logout-btn,
+    .edit-profile button{
+        padding: 10px;
+        font-size: 14px;
+    }
+}
